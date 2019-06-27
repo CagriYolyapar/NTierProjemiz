@@ -1,0 +1,82 @@
+﻿@model Tuple<IPagedList<Product>, List<Category>>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_ShoppingLayout.cshtml";
+}
+
+<h2 style="color:red"> @TempData["message"]</h2>
+<h2 style="color:forestgreen">@TempData["satis"]</h2>
+<div id="OzelUrunler">
+    <div class="row product-list">
+
+        <div style="float:right">
+            @Html.PagedListPager(Model.Item1, page => Url.Action("Index", new { page }))
+        </div>
+        <br /> <br /> <br /> <br /> <br />
+        @foreach (Product item in Model.Item1)
+        {
+            <div class="col-md-4">
+                <section class="panel">
+                    <div class="pro-img-box">
+                        <img src="@item.ImagePath" alt="" />
+                        @*@Html.ActionLink(" ","AddToCart","Member",new {id=item.ID },new {@class="adtocart icon-shopping-cart"})*@
+
+                        @* a href=  *@
+
+                        <a href="@Url.Action("AddToCart","Member",new { id=item.ID})" class="adtocart">
+                            <i class="icon-shopping-cart"></i>
+                        </a>
+                    </div>
+                    <div class="panel-body text-center">
+                        <h4>
+                            <a href="#" class="pro-title">
+                                @item.ProductName
+                            </a>
+                        </h4>
+                        <p class="price">@(Convert.ToDecimal(item.UnitPrice).ToString("C2"))</p>
+                    </div>
+                </section>
+
+
+            </div>
+        }
+
+
+        <div style="float:right">
+            @Html.PagedListPager(Model.Item1, page => Url.Action("Index", new { page }))
+        </div>
+
+    </div>
+</div>
+
+@section Kategoriler{
+
+    
+    <br /><br /><br />
+    <input id="txtSearch" type="text" class="form-control" placeholder="Arama yapınız" /> 
+    <br /> 
+
+    @foreach (Category item in Model.Item2)
+    {
+        <li> @Html.ActionLink(item.CategoryName, "SelectByCategory", "Member", new { id = item.ID }, new { @class = "btn btn-primary" })  </li>
+    }
+
+}
+
+
+<script>
+    $(function () {
+        $("#txtSearch").keyup(function () {
+            var keyword = $("#txtSearch").val();
+            $.ajax({
+                url: "http://localhost:51754/Member/SearchProducts",
+                type:"Get",
+                data: { item: keyword },
+                success: function (donenVeri) {
+                    $("#OzelUrunler").html(donenVeri);
+                }
+            })
+
+        })
+    })
+</script>

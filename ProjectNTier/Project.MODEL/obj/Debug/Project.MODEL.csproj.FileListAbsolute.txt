@@ -1,0 +1,12 @@
+E:\Gruplar\YMS3129\Project\06.10.2019\ProjectNTier\Project.MODEL\bin\Debug\Project.MODEL.dll
+E:\Gruplar\YMS3129\Project\06.10.2019\ProjectNTier\Project.MODEL\bin\Debug\Project.MODEL.pdb
+E:\Gruplar\YMS3129\Project\06.10.2019\ProjectNTier\Project.MODEL\obj\Debug\Project.MODEL.csprojAssemblyReference.cache
+E:\Gruplar\YMS3129\Project\06.10.2019\ProjectNTier\Project.MODEL\obj\Debug\Project.MODEL.csproj.CoreCompileInputs.cache
+E:\Gruplar\YMS3129\Project\06.10.2019\ProjectNTier\Project.MODEL\obj\Debug\Project.MODEL.dll
+E:\Gruplar\YMS3129\Project\06.10.2019\ProjectNTier\Project.MODEL\obj\Debug\Project.MODEL.pdb
+E:\Gruplar\YMS3129\Project\06.13.2019\ProjectNTier\Project.MODEL\bin\Debug\Project.MODEL.dll
+E:\Gruplar\YMS3129\Project\06.13.2019\ProjectNTier\Project.MODEL\bin\Debug\Project.MODEL.pdb
+E:\Gruplar\YMS3129\Project\06.13.2019\ProjectNTier\Project.MODEL\obj\Debug\Project.MODEL.csprojAssemblyReference.cache
+E:\Gruplar\YMS3129\Project\06.13.2019\ProjectNTier\Project.MODEL\obj\Debug\Project.MODEL.csproj.CoreCompileInputs.cache
+E:\Gruplar\YMS3129\Project\06.13.2019\ProjectNTier\Project.MODEL\obj\Debug\Project.MODEL.dll
+E:\Gruplar\YMS3129\Project\06.13.2019\ProjectNTier\Project.MODEL\obj\Debug\Project.MODEL.pdb

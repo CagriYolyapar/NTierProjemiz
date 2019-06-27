@@ -1,0 +1,64 @@
+﻿@model Tuple<IPagedList<Product>, List<Category>>
+@{
+    ViewBag.Title = "SelectByCategory";
+    Layout = "~/Views/Shared/_ShoppingLayout.cshtml";
+}
+
+<h2>SelectByCategory</h2>
+
+@section Kategoriler{
+    <br /><br /><br /><br />    <br /> <br />
+    @foreach (Category item in Model.Item2)
+    {
+        if (item.ID == ViewBag.KategoriID)
+        {
+            <li> @Html.ActionLink(item.CategoryName, "SelectByCategory", "Member", new { id = item.ID }, new { @class = "btn btn-primary", style = "background-color:aquamarine" })  </li>
+        }
+        else
+        {
+            <li> @Html.ActionLink(item.CategoryName, "SelectByCategory", "Member", new { id = item.ID }, new { @class = "btn btn-primary" })  </li>
+        }
+    }
+
+
+}
+
+            <div class="row product-list">
+                <div style="float:right">
+                    @Html.PagedListPager(Model.Item1, page => Url.Action("SelectByCategory", new { page,id=ViewBag.KategoriID }))
+                </div>
+                <br /> <br /> <br /> <br /> <br />
+
+
+
+                @foreach (Product item in Model.Item1)
+                {
+                    <div class="col-md-4">
+                        <section class="panel">
+                            <div class="pro-img-box">
+                                <img src="@item.ImagePath" alt="" />
+                                <a href="@Url.Action("AddToCart","Member",new { id=item.ID})" class="adtocart">
+                                    <i class="icon-shopping-cart"></i>
+                                </a>
+                            </div>
+                            <div class="panel-body text-center">
+                                <h4>
+                                    <a href="#" class="pro-title">
+                                        @item.ProductName
+                                    </a>
+                                </h4>
+                                <p class="price">@(Convert.ToDecimal(item.UnitPrice).ToString("C2"))</p>
+                            </div>
+                        </section>
+
+
+                    </div>
+                }
+
+
+                    <div style="float:right">
+                        @Html.PagedListPager(Model.Item1, page => Url.Action("SelectByCategory", new { page, id = ViewBag.KategoriID }))
+                    </div>
+                <br /> <br /> <br /> <br /> <br />
+
+            </div>

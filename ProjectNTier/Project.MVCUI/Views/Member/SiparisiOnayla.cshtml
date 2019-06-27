@@ -1,0 +1,48 @@
+﻿@model Order
+@{
+    ViewBag.Title = "SiparisiOnayla";
+    Layout = "~/Views/Shared/_ShoppingLayout.cshtml";
+}
+
+<h2>SiparisiOnayla</h2>
+
+<link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-ui-1.12.1.js"></script>
+
+@section Kategoriler{
+    @{
+        decimal toplamTutar = Convert.ToDecimal((Session["scart"] as Cart).TotalPrice);
+    }
+    <span style="color:green"> Odemeniz gereken toplam tutar=> @toplamTutar </span>
+}
+
+<h1 style="color:red"> @ViewBag.Tarih   </h1>
+@using (Html.BeginForm("SiparisiOnayla", "Member", FormMethod.Post))
+{
+
+    <div>
+        Adres Giriniz
+    </div>
+    <div>
+        @Html.TextBoxFor(x => x.ShippedAddress)
+    </div>
+    <div>
+        Tarihi Secin
+    </div>
+    <div>
+        @*@Html.TextBoxFor(x => x.RequiredDate, new { type="date"})*@
+        @Html.TextBoxFor(x => x.RequiredDate, new { type="date" })
+    </div>
+    <div>
+        <button class="btn btn-primary">
+            Siparis Ver
+        </button>
+    </div>
+}
+
+<script>
+    
+    $(".date-picker").datepicker();
+   
+
+</script>

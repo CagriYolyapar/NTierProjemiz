@@ -1,0 +1,49 @@
+﻿@model Cart
+@{
+    ViewBag.Title = "CartPage";
+    Layout = "~/Views/Shared/_ShoppingLayout.cshtml";
+}
+
+<div class="row product-list">
+
+    @TempData["message"]
+
+    @foreach (CartItem item in Model.Sepetim)
+    {
+        <div class="col-md-4">
+            <section class="panel">
+                <div class="pro-img-box">
+                    <img src="@item.ImagePath" alt="" />
+                    @*@Html.ActionLink(" ","AddToCart","Member",new {id=item.ID },new {@class="adtocart icon-shopping-cart"})*@
+
+                    @* a href=  *@
+
+                    <a href="@Url.Action("DeleteFromCart","Member",new { id=item.ID})" class="adtocart">
+                        <i class="icon-trash"></i>
+                    </a>
+                </div>
+                <div class="panel-body text-center">
+                    <h4>
+                        <a href="#" class="pro-title">
+                            @item.Name x @item.Amount
+                        </a>
+                    </h4>
+                    <p class="price">@(item.SubTotal.ToString("C2"))</p>
+                </div>
+            </section>
+
+
+        </div>
+    }
+
+
+   
+
+</div>
+
+@section Kategoriler{
+    @Html.ActionLink("Siparişi onayla","SiparisiOnayla",null,new {@class="btn btn-success" }) <br />
+
+    Odemeniz gereken toplam tutar => @Convert.ToDecimal(Model.TotalPrice).ToString("C2")
+    
+    }

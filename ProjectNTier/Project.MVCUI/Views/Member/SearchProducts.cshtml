@@ -1,0 +1,58 @@
+﻿@model IPagedList<Product>
+
+<div id="OzelUrunler">
+    <div class="row product-list">
+
+        <div style="float:right">
+            @Html.PagedListPager(Model, page => Url.Action("SearchProducts", new {item=ViewBag.Keyword, page }),PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(PagedListRenderOptions.PageNumbersOnly,new AjaxOptions {
+           InsertionMode= InsertionMode.Replace,
+           HttpMethod="Get",
+           UpdateTargetId="OzelUrunler",
+          
+
+
+       }))
+        </div>
+        <br /> <br /> <br /> <br /> <br />
+        @foreach (Product item in Model)
+        {
+            <div class="col-md-4">
+                <section class="panel">
+                    <div class="pro-img-box">
+                        <img src="@item.ImagePath" alt="" />
+                        @*@Html.ActionLink(" ","AddToCart","Member",new {id=item.ID },new {@class="adtocart icon-shopping-cart"})*@
+
+                        @* a href=  *@
+
+                        <a href="@Url.Action("AddToCart","Member",new { id=item.ID})" class="adtocart">
+                            <i class="icon-shopping-cart"></i>
+                        </a>
+                    </div>
+                    <div class="panel-body text-center">
+                        <h4>
+                            <a href="#" class="pro-title">
+                                @item.ProductName
+                            </a>
+                        </h4>
+                        <p class="price">@(Convert.ToDecimal(item.UnitPrice).ToString("C2"))</p>
+                    </div>
+                </section>
+
+
+            </div>
+        }
+
+
+            <div style="float:right">
+                @Html.PagedListPager(Model, page => Url.Action("SearchProducts", new {item=ViewBag.Keyword, page }),PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(PagedListRenderOptions.PageNumbersOnly,new AjaxOptions {
+                 InsertionMode= InsertionMode.Replace,
+                 HttpMethod="Get",
+                 UpdateTargetId="OzelUrunler",
+
+
+
+             }))
+            </div>
+
+    </div>
+</div>

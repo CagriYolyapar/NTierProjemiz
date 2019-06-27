@@ -1,0 +1,15 @@
+E:\Gruplar\YMS3129\Project\06.10.2019\ProjectNTier\Project.TOOLS\bin\Debug\Project.TOOLS.dll
+E:\Gruplar\YMS3129\Project\06.10.2019\ProjectNTier\Project.TOOLS\bin\Debug\Project.TOOLS.pdb
+E:\Gruplar\YMS3129\Project\06.10.2019\ProjectNTier\Project.TOOLS\obj\Debug\Project.TOOLS.csproj.CoreCompileInputs.cache
+E:\Gruplar\YMS3129\Project\06.10.2019\ProjectNTier\Project.TOOLS\obj\Debug\Project.TOOLS.dll
+E:\Gruplar\YMS3129\Project\06.10.2019\ProjectNTier\Project.TOOLS\obj\Debug\Project.TOOLS.pdb
+E:\Gruplar\YMS3129\Project\06.10.2019\ProjectNTier\Project.TOOLS\obj\Debug\Project.TOOLS.csprojAssemblyReference.cache
+E:\Gruplar\YMS3129\Project\06.13.2019\ProjectNTier\Project.TOOLS\bin\Debug\Project.TOOLS.dll
+E:\Gruplar\YMS3129\Project\06.13.2019\ProjectNTier\Project.TOOLS\bin\Debug\Project.TOOLS.pdb
+E:\Gruplar\YMS3129\Project\06.13.2019\ProjectNTier\Project.TOOLS\obj\Debug\Project.TOOLS.csprojAssemblyReference.cache
+E:\Gruplar\YMS3129\Project\06.13.2019\ProjectNTier\Project.TOOLS\obj\Debug\Project.TOOLS.csproj.CoreCompileInputs.cache
+E:\Gruplar\YMS3129\Project\06.13.2019\ProjectNTier\Project.TOOLS\obj\Debug\Project.TOOLS.dll
+E:\Gruplar\YMS3129\Project\06.13.2019\ProjectNTier\Project.TOOLS\obj\Debug\Project.TOOLS.pdb
+E:\Gruplar\YMS3129\Project\06.13.2019\ProjectNTier\Project.TOOLS\bin\Debug\Project.MODEL.dll
+E:\Gruplar\YMS3129\Project\06.13.2019\ProjectNTier\Project.TOOLS\bin\Debug\Project.MODEL.pdb
+E:\Gruplar\YMS3129\Project\06.13.2019\ProjectNTier\Project.TOOLS\obj\Debug\Project.TOOLS.csproj.CopyComplete

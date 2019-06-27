@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "RegisterOk";
+    Layout = null;
+}
+
+
+<section>
+    <div class="main-content">
+        <div class="text-success">
+            <h2>
+                Tebrikler!! Kayıt oldunuz. Lutfen E-Mail adresinize gönderdigimiz aktivasyon linkine basarak hesabınızı aktive ediniz. Hesabınız aktif olmadan alısveriş yapamazsınız.
+            </h2>
+        </div>
+    </div>
+</section>
+
+<script>
+    $(function () {
+        setTimeout(function () {
+            window.location = "/Home/Register";
+        }, 5000)
+    })
+</script>
