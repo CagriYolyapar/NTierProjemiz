@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoryPattern\BaseRep\BaseRepository.cs" />
+    <Compile Include="RepositoryPattern\BaseRep\Test.cs" />
     <Compile Include="RepositoryPattern\ConcRep\AppUserDetailRepository.cs" />
     <Compile Include="RepositoryPattern\ConcRep\AppUserRepository.cs" />
     <Compile Include="RepositoryPattern\ConcRep\CategoryRepository.cs" />
